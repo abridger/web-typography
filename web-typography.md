@@ -83,7 +83,7 @@ Using Webfonts
 Doing More with Type Online
 ---------------------------
 
-###[Letting.js](http://letteringjs.com/)
+###[Lettering.js](http://letteringjs.com/)
 * A lightweight, easy to use Javascript span injector for radical Web Typography.
 * Provides a solution for custom type headings, while keeping the text selectable.
 * Allows styling to be applied to individual letters and allow for kerning using relative positioning and left/right margins.

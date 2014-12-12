@@ -83,7 +83,9 @@ Using Webfonts
 Doing More with Type Online
 ---------------------------
 
-###[Lettering.js](http://letteringjs.com/)
+###General/All Purpose
+
+####[Lettering.js](http://letteringjs.com/)
 * A lightweight, easy to use Javascript span injector for radical Web Typography.
 * Provides a solution for custom type headings, while keeping the text selectable.
 * Allows styling to be applied to individual letters and allow for kerning using relative positioning and left/right margins.
@@ -93,15 +95,47 @@ Doing More with Type Online
 * http://garann.com/allgirlhacknight/invite.html
 * http://lostworldsfairs.com/atlantis/
 
+###Responsive Text
+
+####[FlowType.js](http://simplefocus.com/flowtype/)
+* Changes the font size based on a specific element's width to try and maintain legibility and maintain the same character-per-line length.
+* Sets minimum and maximum width threshholds
+
+####[Squishy](http://cmsauve.com/projects/squishy/)
+
+####[FitText](http://fittextjs.com/)
+
+####[Slabtext](http://freqdec.github.io/slabText/)
+
+####[ResponsiveText](https://github.com/ghepting/jquery-responsive-text)
+
+####[Hatchshow](http://charliepark.org/hatchshow/)
+
+###Text Positioning and Wrapping
+
+####[Bacon](http://baconforme.com/)
+
+####[jQSlickWrap](http://www.jwf.us/projects/jQSlickWrap/)
+
+###Text Animations
+
+####[Textillate](http://jschr.github.io/textillate/)
+
+####[Animate.css](http://daneden.github.io/animate.css/)
+
+###[Super Simple Text Rotator](http://www.thepetedesign.com/demos/jquery_super_simple_text_rotator_demo.html#)
+
+###[Flipping Text](https://github.com/peachananr/flipping_text)
+
+###Kerning
 
 ###[Kerning.js](http://kerningjs.com/)
 * Allows letter placing to be individually adjusted for perfect kerning.
 * Allows the adjustment of individual character sizes, and for transformations to be applied to individual characters.
 * Selective colouring, and conditional formatting.
 
-###[FlowType.js](http://simplefocus.com/flowtype/)
-* Changes the font size based on a specific element's width to try and maintain legibility and maintain the same character-per-line length.
-* Sets minimum and maximum width threshholds
+####[Type Butter](http://typebutter.com/)
+
 
 ###[ffffallback](http://ffffallback.com/)
 * Bookmarklet that allows you to identify webfonts on a site and test different fallback font choices.

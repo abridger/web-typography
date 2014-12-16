@@ -3,11 +3,26 @@ Web Typography
 
 Type Basics
 -----------
-* font face vs font family
-* serif, sans-serif and monospace
-* font classifations
-* font weight
-* x-height
+
+###Font Face / Font Family
+`font-family`
+* A font is a specific alphabet (set of glyphs) in a specific face, weight and size. So 10pt Garamond Bold would be one font, 12pt Garamond Italic would be another. Fonts are grouped together in collections of similarly designed faces called font families or typefaces - what we generally think of as a font (Arial, Helvetica, Caslon, Bodoni, etc.)
+
+
+###Serif, Sans-serif and Monospace
+* Serifs are small projections attached to the ends of strokes that make up each character. Serifed fonts were generally used for print body text, as they were thought to increase readability, although there is now debate about this. Sans-serif fonts have generally been thought to be more readable on screen, as serifs aren't always rendered well on lower resolution screens.
+* Sans-serif fonts obviously don't have serifs.
+* Monospace fonts are those in which every glyph occupies the same width (unlike other fonts in which glph)
+
+###Decorative, Heading and Body Fonts
+
+
+###Glyphs
+* A glyph is an unique symbol within a font to represent a letter, number or punctuation.
+* Different glyphs can be used to represent the same character or set of characters - uppercase, lowercase, ligatures, stylistic variations.
+* Not all fonts or families will have a complete set of glyphs, so it's possible that some of the characters you would like to used may be missing.
+* Some specialised typefaces have very specific sets of glyphs - icon fonts are becoming much more common in order to handle high resolution displays.
+
 
 ###Font Size
 `font-size`
@@ -22,6 +37,9 @@ h1 {font-size: 2.5em;}`
 [W3Schools] [1]
 
 ###X-Height
+* This is the distance between the baseline and the mean line of lower-case letters in a typeface, which is generally the height of the letter x.
+* Different fonts will have different x heights at a similar size, which will affect their readability and overall impact.
+* CSS does have an `ex` unit, which is realtive to the x-height of the current font, but different browsers handle this extremely differently and it's rarely used.
 
 ###Measure & Responsive Typography
 * The length of a line of text.
@@ -38,11 +56,6 @@ h1 {font-size: 2.5em;}`
 * The space between lines of text is referred to as leading in print typography, and refers to the distance between the baselines of successive lines of type. Strips of lead used to be used to separate the lines of type from another and increase the line height.
 * Leading or line-height can be used to increase readability of type. Greater space between lines of type means that the eye can more easily pick out type with a smaller x-height, and follow long-form type better.
 * Set using line-height in CSS: `line-height: 1.2em;` or `line-height: 120%`;
-
-###Decorative, Heading and Body Fonts
-
-
-###Glyphs
 
 ###Typographic Hierarchy
 
@@ -90,7 +103,7 @@ Doing More with Type Online
 * Provides a solution for custom type headings, while keeping the text selectable.
 * Allows styling to be applied to individual letters and allow for kerning using relative positioning and left/right margins.
 
-####Examples:
+#####Examples:
 * http://trentwalton.com/2011/05/10/fit-to-scale/
 * http://garann.com/allgirlhacknight/invite.html
 * http://lostworldsfairs.com/atlantis/
@@ -123,13 +136,13 @@ Doing More with Type Online
 
 ####[Animate.css](http://daneden.github.io/animate.css/)
 
-###[Super Simple Text Rotator](http://www.thepetedesign.com/demos/jquery_super_simple_text_rotator_demo.html#)
+####[Super Simple Text Rotator](http://www.thepetedesign.com/demos/jquery_super_simple_text_rotator_demo.html#)
 
-###[Flipping Text](https://github.com/peachananr/flipping_text)
+####[Flipping Text](https://github.com/peachananr/flipping_text)
 
 ###Kerning
 
-###[Kerning.js](http://kerningjs.com/)
+####[Kerning.js](http://kerningjs.com/)
 * Allows letter placing to be individually adjusted for perfect kerning.
 * Allows the adjustment of individual character sizes, and for transformations to be applied to individual characters.
 * Selective colouring, and conditional formatting.
@@ -186,6 +199,13 @@ Type Sources
 * Innovative font foundry providing well-made, free & open-source, @font-face ready fonts.
 * Great source of interesting and distinctive fonts.
 
+
+Identifying Fonts (and pinching ideas)
+-----------------
+
+###[What the Font] (http://www.myfonts.com/WhatTheFont/)
+
+###[Identifont] (http://www.identifont.com/)
 
 
 [1]: http://www.w3schools.com/css/css_font.asp] "W3Schools"

@@ -83,7 +83,7 @@ Hyphens are a punctuation mark, and shouldn&rsquo;t be confused with the two typ
 An en dash or N dash is typically the width of the capital N character in a given typeface. En dashes indicates range of values (eg. 2014&ndash;2015) or connection between words (eg. Anglo&ndash;American relations), both unspaced. It can also be used parenthetically,, with spaces (eg. She looked &ndash; with deep regret &ndash; at the terrible punctuation). En dashes are much more common in the UK, and em dashes are rarely used.
 * N dash: `&ndash;` or `&#8211;`
 
-An em dash or M dash is typically the width of the capital M character in a given typeface. Em dashes are much more common in the US, where they are used un-spaced to break up parts of a sentence/in place of parentheses (eg. She looked&mdash;with deep regret&ndash;at the terrible punctuation).
+An em dash or M dash is typically the width of the capital M character in a given typeface. Em dashes are much more common in the US, where they are used un-spaced to break up parts of a sentence/in place of parentheses (eg. She looked&mdash;with deep regret&mdash;at the terrible punctuation).
 * M dash: `&mdash;` or `&#8212;`
 
 [Practical Typography] [3]
@@ -99,6 +99,10 @@ Yep, that&rsquo;s right, subtraction operators are distinct from hyphens, and mu
 Fractions should also be rendered in their &lsquo;vulgar&rsquo; form if possible, rather than written out with a slash &ndash; eg. &frac12; rather than 1/2 or &#8531; rather than 1/3.
 
 * One half: `&frac12;` or `&#189;`
+* One third: `&#8531;`
+* Two thirds: `&#8532;`
+* One quarter: `&frac14;` or `&#188;`
+* One tenth: `&#8530;`
 
 A Brief History of Typography
 -----------------------------
@@ -121,7 +125,43 @@ Thanks to [David Kadavy] [4]
 
 Using Webfonts
 --------------
+###Font Face
+Font face is the CSS property used to specify a font and the URL where it can be found:
 
+`@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(http://fonts.gstatic.com/s/opensans/v10/K88pR3goAWT7BTt32Z01m5Bw1xU1rKptJj_0jans920.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+  }`
+
+Font files can be stored locally, with the `src` property of the CSS tag pointing to the relative address, or externally hosted on a CDN, as above with the Google Font Open Sans.
+
+If you are using a service like Google Fonts, which provides a link to an external stylesheet then you can use the `font-family` property as normal in your stylesheets:
+
+* Stylesheet link: `<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>`
+* CSS import: `@import url(http://fonts.googleapis.com/css?family=Open+Sans);`
+
+`h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  }`
+
+To maximise compatability across browsers, you can specify multiple source files for in the `@font-face` property:
+
+`src: url('fonts/FontName.eot');
+ src: url('fonts/FontName.eot?#iefix') format('embedded-opentype'),
+      url('fonts/FontName-webfont.woff') format('woff'),
+      url('fonts/FontName-webfont.ttf') format('truetype'),
+      url('fonts/FontName-webfont.svg#FontName') format('svg');`
+
+#####Browser support as of 1/1/2015:
+* EOT - Embedded OpenType fonts: IE8 upwards.
+* WOFF - Web Open Type Format: all current browsers except Opera Mini.
+* SVG fonts: Safari (desktop and mobile) and Android.
+* TTF/OTF - TrueType and OpenType fonts: support in all current browsers, except Opera Mini. Partial support in IE.
+* WOFF 2.0 - Web Open Type Format: support in newer versions of Chrome, Opera an Android. Can be enabled in newer developer versions of Firefox.
 
 
 Doing More with Type Online

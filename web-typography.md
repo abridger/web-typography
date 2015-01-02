@@ -204,8 +204,10 @@ Identifying Fonts (and pinching ideas)
 -----------------
 
 ###[What the Font] (http://www.myfonts.com/WhatTheFont/)
+* Useful for identifying typefaces from images uploaded to the site.
 
 ###[Identifont] (http://www.identifont.com/)
+* Useful for browsing and identifying typefaces by appearance, or similarity to others. The questionnaire for identifying typefaces is often quite accurate, or at least good for exploring other options.
 
 
 [1]: http://www.w3schools.com/css/css_font.asp] "W3Schools"

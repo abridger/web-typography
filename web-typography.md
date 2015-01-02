@@ -12,14 +12,14 @@ Type Basics
 ###Serif, Sans-serif and Monospace
 * Serifs are small projections attached to the ends of strokes that make up each character. Serifed fonts were generally used for print body text, as they were thought to increase readability, although there is now debate about this. Sans-serif fonts have generally been thought to be more readable on screen, as serifs aren&rsquo;t always rendered well on lower resolution screens.
 * Sans-serif fonts obviously don&rsquo;t have serifs.
-* Monospace fonts are those in which every glyph occupies the same width (unlike other fonts in which glph)
+* Monospace fonts are those in which every glyph occupies the same width (unlike other fonts in which glphs are different widths).
 
 ###Decorative, Heading and Body Fonts
 
 
 ###Glyphs
 * A glyph is an unique symbol within a font to represent a letter, number or punctuation.
-* Different glyphs can be used to represent the same character or set of characters - uppercase, lowercase, ligatures, stylistic variations.
+* Different glyphs can be used to represent the same character or set of characters &ndash; uppercase, lowercase, ligatures, stylistic variations.
 * Not all fonts or families will have a complete set of glyphs, so it&rsquo;s possible that some of the characters you would like to used may be missing.
 * Some specialised typefaces have very specific sets of glyphs &ndash; icon fonts are becoming much more common in order to handle high resolution displays.
 
@@ -59,6 +59,9 @@ h1 {font-size: 2.5em;}`
 * Leading or line-height can be used to increase readability of type. Greater space between lines of type means that the eye can more easily pick out type with a smaller x-height, and follow long-form type better.
 * Set using line-height in CSS: `line-height: 1.2em;` or `line-height: 120%`;
 
+###Kerning
+
+
 ###Typographic Hierarchy
 
 ###Readability
@@ -82,7 +85,7 @@ For measurements map coordinates, time and measurements in feet and inches, you 
 ####Hyphens and Dashes
 Hyphens are a punctuation mark, and shouldn&rsquo;t be confused with the two typographic dashes, N and M dashes.
 
-An en dash or N dash is typically the width of the capital N character in a given typeface. En dashes indicates range of values (eg. 2014&ndash;2015) or connection between words (eg. Anglo&ndash;American relations), both unspaced. It can also be used parenthetically,, with spaces (eg. She looked &ndash; with deep regret &ndash; at the terrible punctuation). En dashes are much more common in the UK, and em dashes are rarely used.
+An en dash or N dash is typically the width of the capital N character in a given typeface. En dashes indicates range of values (eg. 2014&ndash;2015) or connection between words (eg. Anglo&ndash;American relations), both unspaced. It can also be used parenthetically, with spaces (eg. She looked &ndash; with deep regret &ndash; at the terrible punctuation). En dashes are much more common in the UK, and em dashes are rarely used.
 * N dash: `&ndash;` or `&#8211;`
 
 An em dash or M dash is typically the width of the capital M character in a given typeface. Em dashes are much more common in the US, where they are used un-spaced to break up parts of a sentence/in place of parentheses (eg. She looked&mdash;with deep regret&mdash;at the terrible punctuation).
@@ -271,7 +274,7 @@ Type Sources
 * Selling one-off perpetual licenses to use commercial typefaces online. Allows you to download a webfont kit and host on your sites.
 * Typefaces from Monotype and Linotype are provided on a pay-as-you-go basis, rather than one-off licences.
 
-###[MyFonts](http://www.fonts.com/web-fonts)
+###[Fonts.com](http://www.fonts.com/web-fonts)
 * Commercial offering from Monotype.
 * Allows web and print font packages.
 * Provides JS, CSS and self-hosting options.

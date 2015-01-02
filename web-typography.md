@@ -64,10 +64,41 @@ h1 {font-size: 2.5em;}`
 ###A Couple of Pedantic Points...
 
 ####Typographer's Quotes
-* Ideally, text should use typographer's quotes (curly quote marks)
+Text should use typographer&rsquo;s quotes/smart quotes/curly quotes wherever possible:
 
-####Hyphens, N-Dashes and M-Dashes
+* Single opening quote: `&lsquo;` or `&#8216;`
+* Single closing quote: `&rsquo;` or `&#8217;`
+* Double opening quote: `&ldquo;` or `&#8220;`
+* Double closing quote: `&rdquo;` or `&#8221;`
 
+
+For measurements map coordinates, time and measurements in feet and inches, you should use primes &ndash; eg. 40&deg; 44&prime; 54.3588&Prime; N, 73&deg; 59&prime; 8.3616&Prime; W.
+
+* Single prime: `&prime;` or `&#8242;`
+* Double prime: `&Prime;` or `&#8243;`
+
+####Hyphens and Dashes
+Hyphens are a punctuation mark, and shouldn&rsquo;t be confused with the two typographic dashes, N and M dashes.
+
+An en dash or N dash is typically the width of the capital N character in a given typeface. En dashes indicates range of values (eg. 2014&ndash;2015) or connection between words (eg. Anglo&ndash;American relations), both unspaced. It can also be used parenthetically,, with spaces (eg. She looked &ndash; with deep regret &ndash; at the terrible punctuation). En dashes are much more common in the UK, and em dashes are rarely used.
+* N dash: `&ndash;` or `&#8211;`
+
+An em dash or M dash is typically the width of the capital M character in a given typeface. Em dashes are much more common in the US, where they are used un-spaced to break up parts of a sentence/in place of parentheses (eg. She looked&mdash;with deep regret&ndash;at the terrible punctuation).
+* M dash: `&mdash;` or `&#8212;`
+
+[Practical Typography] [3]
+
+####A Hyphen is not a Minus Sign...
+Yep, that&rsquo;s right, subtraction operators are distinct from hyphens, and multiplication symbols are distinct from Xs:
+
+* Addition: `&#43;`
+* Subtraction: `&minus;` or `&#8722;`
+* Multiplication: `&times;` or `&#215;`
+* Division: `&divide;` or `&#247;`
+
+Fractions should also be rendered in their &lsquo;vulgar&rsquo; form if possible, rather than written out with a slash &ndash; eg. &frac12; rather than 1/2 or &#8531; rather than 1/3.
+
+* One half: `&frac12;` or `&#189;`
 
 A Brief History of Typography
 -----------------------------
@@ -85,7 +116,7 @@ Popular web fonts (Arial, Verdana, Georgia, and Times New Roman) are such not on
 
 Computers only used to have 256 colours avaiable, and low resolution screens (the web is generally optimised for 72dpi). With almost all monitors now displaying 16million colours and rendering type edges much more smoothly, a greater range of fonts render better. Tablets and phones now also display at much closer to print quality.
 
-Thanks to [David Kadavy] [3]
+Thanks to [David Kadavy] [4]
 
 
 Using Webfonts
@@ -212,4 +243,5 @@ Identifying Fonts (and pinching ideas)
 
 [1]: http://www.w3schools.com/css/css_font.asp] "W3Schools"
 [2]: http://www.smashingmagazine.com/2014/09/29/balancing-line-length-font-size-responsive-web-design/#more-202415 "Smashing Magazine - Size Matters: Balancing Line Length And Font Size In Responsive Web Design"
-[3]: http://kadavy.net/blog/posts/design-for-hackers-why-you-dont-use-garamond-on-the-web/ "David Kadavy"
+[3]: http://practicaltypography.com/hyphens-and-dashes.html "hyphens and dashes"
+[4]: http://kadavy.net/blog/posts/design-for-hackers-why-you-dont-use-garamond-on-the-web/ "David Kadavy"

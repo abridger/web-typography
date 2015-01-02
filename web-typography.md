@@ -10,8 +10,8 @@ Type Basics
 
 
 ###Serif, Sans-serif and Monospace
-* Serifs are small projections attached to the ends of strokes that make up each character. Serifed fonts were generally used for print body text, as they were thought to increase readability, although there is now debate about this. Sans-serif fonts have generally been thought to be more readable on screen, as serifs aren't always rendered well on lower resolution screens.
-* Sans-serif fonts obviously don't have serifs.
+* Serifs are small projections attached to the ends of strokes that make up each character. Serifed fonts were generally used for print body text, as they were thought to increase readability, although there is now debate about this. Sans-serif fonts have generally been thought to be more readable on screen, as serifs aren&rsquo;t always rendered well on lower resolution screens.
+* Sans-serif fonts obviously don&rsquo;t have serifs.
 * Monospace fonts are those in which every glyph occupies the same width (unlike other fonts in which glph)
 
 ###Decorative, Heading and Body Fonts
@@ -20,14 +20,14 @@ Type Basics
 ###Glyphs
 * A glyph is an unique symbol within a font to represent a letter, number or punctuation.
 * Different glyphs can be used to represent the same character or set of characters - uppercase, lowercase, ligatures, stylistic variations.
-* Not all fonts or families will have a complete set of glyphs, so it's possible that some of the characters you would like to used may be missing.
-* Some specialised typefaces have very specific sets of glyphs - icon fonts are becoming much more common in order to handle high resolution displays.
+* Not all fonts or families will have a complete set of glyphs, so it&rsquo;s possible that some of the characters you would like to used may be missing.
+* Some specialised typefaces have very specific sets of glyphs &ndash; icon fonts are becoming much more common in order to handle high resolution displays.
 
 
 ###Font Size
 `font-size`
 * In print, this is described in points or picas, but on the web it is described in pixels or ems.
-* This can be set with pixel height, but it's recommended to use em rather than pixels to allow users to resize the text in the browser menu. Em units are recommended by W3C. 1em is equal to the current font size. The default text size in browsers is 16px. So, the default size of 1em is 16px.
+* This can be set with pixel height, but it&rsquo;s recommended to use em rather than pixels to allow users to resize the text in the browser menu. Em units are recommended by W3C. 1em is equal to the current font size. The default text size in browsers is 16px. So, the default size of 1em is 16px.
 * Unfortunately, there is still a problem with older versions of IE and ems. The text becomes larger than it should when made larger, and smaller than it should when made smaller. The solution that works in all browsers, is to set a default font-size in percent for the <body> element and then use ems to set the size of specific elements in the body:
 
 `body {font-size: 100%;}
@@ -39,7 +39,7 @@ h1 {font-size: 2.5em;}`
 ###X-Height
 * This is the distance between the baseline and the mean line of lower-case letters in a typeface, which is generally the height of the letter x.
 * Different fonts will have different x heights at a similar size, which will affect their readability and overall impact.
-* CSS does have an `ex` unit, which is realtive to the x-height of the current font, but different browsers handle this extremely differently and it's rarely used.
+* CSS does have an `ex` unit, which is realtive to the x-height of the current font, but different browsers handle this extremely differently and it&rsquo;s rarely used.
 
 ###Measure & Responsive Typography
 * The length of a line of text.
@@ -63,7 +63,7 @@ h1 {font-size: 2.5em;}`
 
 ###A Couple of Pedantic Points...
 
-####Typographer's Quotes
+####Typographer&rsquo;s Quotes
 Text should use typographer&rsquo;s quotes/smart quotes/curly quotes wherever possible:
 
 * Single opening quote: `&lsquo;` or `&#8216;`
@@ -129,11 +129,17 @@ Using Webfonts
 Font face is the CSS property used to specify a font and the URL where it can be found:
 
 `@font-face {
+
   font-family: 'Open Sans';
+
   font-style: normal;
+
   font-weight: 400;
+
   src: url(http://fonts.gstatic.com/s/opensans/v10/K88pR3goAWT7BTt32Z01m5Bw1xU1rKptJj_0jans920.woff2) format('woff2');
+
   unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+
   }`
 
 Font files can be stored locally, with the `src` property of the CSS tag pointing to the relative address, or externally hosted on a CDN, as above with the Google Font Open Sans.
@@ -144,16 +150,23 @@ If you are using a service like Google Fonts, which provides a link to an extern
 * CSS import: `@import url(http://fonts.googleapis.com/css?family=Open+Sans);`
 
 `h1 {
+
   font-family: 'Open Sans', sans-serif;
+
   font-weight: 400;
+
   }`
 
 To maximise compatability across browsers, you can specify multiple source files for in the `@font-face` property:
 
 `src: url('fonts/FontName.eot');
+
  src: url('fonts/FontName.eot?#iefix') format('embedded-opentype'),
+
       url('fonts/FontName-webfont.woff') format('woff'),
+
       url('fonts/FontName-webfont.ttf') format('truetype'),
+
       url('fonts/FontName-webfont.svg#FontName') format('svg');`
 
 #####Browser support as of 1/1/2015:
@@ -181,31 +194,39 @@ Doing More with Type Online
 
 ###Responsive Text
 
-####[FlowType.js](http://simplefocus.com/flowtype/)
-* Changes the font size based on a specific element's width to try and maintain legibility and maintain the same character-per-line length.
-* Sets minimum and maximum width threshholds
+####[FlowType.js](http://simplefocus.com/flowtype)
+A jQuery plugin that changes the font size based on a specific element&rsquo;s width to try and maintain legibility and maintain the same character-per-line length. It sets minimum and maximum width threshholds.
 
 ####[Squishy](http://cmsauve.com/projects/squishy/)
+A jQuery plugin that automatically resizes text to exactly fit the container.
 
 ####[FitText](http://fittextjs.com/)
+A jQuery plugin for making scalable headlines that fill the width of a parent element. Only for headers, not paragraph text.
 
 ####[Slabtext](http://freqdec.github.io/slabText/)
-
-####[ResponsiveText](https://github.com/ghepting/jquery-responsive-text)
+A jQuery plugin for producing big, responsive headlines. It works by splitting headlines into rows before resizing each row to fill the available horizontal space.
 
 ####[Hatchshow](http://charliepark.org/hatchshow/)
+A jQuery plugin to balance measures. Like Slabtext, it can be used to create big, bold headlines.
+
+####[ResponsiveText](https://github.com/ghepting/jquery-responsive-text)
+A jQuery plugin to set font sizes responsively based on its container width. Unlike Squishy, FitText or Slabtext, it can be used with paragraph text.
 
 ###Text Positioning and Wrapping
 
 ####[Bacon](http://baconforme.com/)
+A jQuery plugin that allows for text to be wrapped around a bezier curve or a line.
 
 ####[jQSlickWrap](http://www.jwf.us/projects/jQSlickWrap/)
+A jQuery plugin that allows for text to be wrapped around the content of floated images.
 
 ###Text Animations
 
 ####[Textillate](http://jschr.github.io/textillate/)
+Built on top of animate.css and lettering.js libraries to apply CSS3 animations to text.
 
 ####[Animate.css](http://daneden.github.io/animate.css/)
+A library of cross-browser CSS animations.
 
 ####[Super Simple Text Rotator](http://www.thepetedesign.com/demos/jquery_super_simple_text_rotator_demo.html#)
 
@@ -228,7 +249,7 @@ Type Sources
 -----------------
 
 ###[Typekit](http://typekit.com)
-* Subscription based service providing commercial typefaces. Now part of Adobe's Creative Cloud offering.
+* Subscription based service providing commercial typefaces. Now part of Adobe&rsquo;s Creative Cloud offering.
 * Limited range of type foundries, although this does appear to be growing. Does not include Monotype of Linotype typefaces (separate services).
 * Javscript based font availability: typekit-generated JS allows selected font-faces to be used in CSS.
 

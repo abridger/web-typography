@@ -31,6 +31,7 @@ Type Basics
 * Unfortunately, there is still a problem with older versions of IE and ems. The text becomes larger than it should when made larger, and smaller than it should when made smaller. The solution that works in all browsers, is to set a default font-size in percent for the <body> element and then use ems to set the size of specific elements in the body:
 
 `body {font-size: 100%;}
+
 h1 {font-size: 2.5em;}`
 
 
@@ -49,6 +50,7 @@ h1 {font-size: 2.5em;}`
 
 ###Font Style
 `font-style: normal`
+
 `font-style: italic`
 
 ###Leading
@@ -104,16 +106,27 @@ Fractions should also be rendered in their &lsquo;vulgar&rsquo; form if possible
 * One quarter: `&frac14;` or `&#188;`
 * One tenth: `&#8530;`
 
-A Brief History of Typography
------------------------------
-
-
 History of Web Typography
 -------------------------
 
 ###Font Availability
+Few fonts are available across almost all  systems, and therefore guaranteed to display consistently for all users. The following can probably br relied upon &ndash; all others should be provided via `@font-face`, depending on licensing:
 
+####Sans-serif
+* Arial
+* Arial Black
+* Tahoma
+* Trebuchet
+* Verdana
 
+####Serif
+* Georgia
+* Times New Roman
+
+####Monospaced
+* Courier
+
+[CSS Font Stack] [3]
 
 ###Screen Limitations
 Popular web fonts (Arial, Verdana, Georgia, and Times New Roman) are such not only because of their wide availability, but because they are drawn with the screen’s limitations in mind. For example, Georgia reads better on screen than Garamond primarily because it has a higher x-height, and therefore a larger eye.
@@ -235,15 +248,16 @@ A library of cross-browser CSS animations.
 ###Kerning
 
 ####[Kerning.js](http://kerningjs.com/)
+A jQuery plugin that allows for text to be kerned correclty.
 * Allows letter placing to be individually adjusted for perfect kerning.
 * Allows the adjustment of individual character sizes, and for transformations to be applied to individual characters.
 * Selective colouring, and conditional formatting.
 
 ####[Type Butter](http://typebutter.com/)
-
+A jQuery plugin that allows for optical kerning for webfonts.
 
 ###[ffffallback](http://ffffallback.com/)
-* Bookmarklet that allows you to identify webfonts on a site and test different fallback font choices.
+Bookmarklet that allows you to identify webfonts on a site and test different fallback font choices.
 
 Type Sources
 -----------------
@@ -305,4 +319,5 @@ Identifying Fonts (and pinching ideas)
 [1]: http://www.w3schools.com/css/css_font.asp] "W3Schools"
 [2]: http://www.smashingmagazine.com/2014/09/29/balancing-line-length-font-size-responsive-web-design/#more-202415 "Smashing Magazine - Size Matters: Balancing Line Length And Font Size In Responsive Web Design"
 [3]: http://practicaltypography.com/hyphens-and-dashes.html "hyphens and dashes"
-[4]: http://kadavy.net/blog/posts/design-for-hackers-why-you-dont-use-garamond-on-the-web/ "David Kadavy"
+[4]: http://www.cssfontstack.com/
+[5]: http://kadavy.net/blog/posts/design-for-hackers-why-you-dont-use-garamond-on-the-web/ "David Kadavy"

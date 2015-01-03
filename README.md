@@ -162,8 +162,8 @@ Font face is the CSS property used to specify a font and the URL where it can be
 
 	If you are using a service like Google Fonts, which provides a link to an external stylesheet then you can use the `font-family` property as normal in your stylesheets:
 
-	* Stylesheet link: `<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>`
-	* CSS import: `@import url(http://fonts.googleapis.com/css?family=Open+Sans);`
+* Stylesheet link: `<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>`
+* CSS import: `@import url(http://fonts.googleapis.com/css?family=Open+Sans);`
 
 	`h1 {
 
@@ -173,7 +173,7 @@ Font face is the CSS property used to specify a font and the URL where it can be
 
 		}`
 
-		To maximise compatability across browsers, you can specify multiple source files for in the `@font-face` property:
+To maximise compatability across browsers, you can specify multiple source files for in the `@font-face` property:
 
 		`src: url('fonts/FontName.eot');
 
@@ -185,143 +185,144 @@ Font face is the CSS property used to specify a font and the URL where it can be
 
 		url('fonts/FontName-webfont.svg#FontName') format('svg');`
 
-		#####Browser support as of 1/1/2015:
-		* EOT - Embedded OpenType fonts: IE8 upwards.
-		* WOFF - Web Open Type Format: all current browsers except Opera Mini.
-		* SVG fonts: Safari (desktop and mobile) and Android.
-		* TTF/OTF - TrueType and OpenType fonts: support in all current browsers, except Opera Mini. Partial support in IE.
-		* WOFF 2.0 - Web Open Type Format: support in newer versions of Chrome, Opera an Android. Can be enabled in newer developer versions of Firefox.
+#####Browser support as of 1/1/2015:
+* EOT - Embedded OpenType fonts: IE8 upwards.
+* WOFF - Web Open Type Format: all current browsers except Opera Mini.
+* SVG fonts: Safari (desktop and mobile) and Android.
+* TTF/OTF - TrueType and OpenType fonts: support in all current browsers, except Opera Mini. Partial support in IE.
+* WOFF 2.0 - Web Open Type Format: support in newer versions of Chrome, Opera an Android. Can be enabled in newer developer versions of Firefox.
 
 
-		Doing More with Type Online
-		---------------------------
+Doing More with Type Online
+---------------------------
 
-		###General/All Purpose
+###General/All Purpose
 
-		####[Lettering.js](http://letteringjs.com/)
-		* A lightweight, easy to use Javascript span injector for radical Web Typography.
-		* Provides a solution for custom type headings, while keeping the text selectable.
-		* Allows styling to be applied to individual letters and allow for kerning using relative positioning and left/right margins.
+####[Lettering.js](http://letteringjs.com/)
+* A lightweight, easy to use Javascript span injector for radical Web Typography.
+* Provides a solution for custom type headings, while keeping the text selectable.
+* Allows styling to be applied to individual letters and allow for kerning using relative positioning and left/right margins.
 
-		#####Examples:
-		* http://trentwalton.com/2011/05/10/fit-to-scale/
-		* http://garann.com/allgirlhacknight/invite.html
-		* http://lostworldsfairs.com/atlantis/
+#####Examples:
+* http://trentwalton.com/2011/05/10/fit-to-scale/
+* http://garann.com/allgirlhacknight/invite.html
+* http://lostworldsfairs.com/atlantis/
 
-		###Responsive Text
+###Responsive Text
 
-		####[FlowType.js](http://simplefocus.com/flowtype)
-		A jQuery plugin that changes the font size based on a specific element&rsquo;s width to try and maintain legibility and maintain the same character-per-line length. It sets minimum and maximum width threshholds.
+####[FlowType.js](http://simplefocus.com/flowtype)
+A jQuery plugin that changes the font size based on a specific element&rsquo;s width to try and maintain legibility and maintain the same character-per-line length. It sets minimum and maximum width threshholds.
 
-		####[Squishy](http://cmsauve.com/projects/squishy/)
-		A jQuery plugin that automatically resizes text to exactly fit the container.
+####[Squishy](http://cmsauve.com/projects/squishy/)
+A jQuery plugin that automatically resizes text to exactly fit the container.
 
-		####[FitText](http://fittextjs.com/)
-		A jQuery plugin for making scalable headlines that fill the width of a parent element. Only for headers, not paragraph text.
+####[FitText](http://fittextjs.com/)
+A jQuery plugin for making scalable headlines that fill the width of a parent element. Only for headers, not paragraph text.
 
-		####[Slabtext](http://freqdec.github.io/slabText/)
-		A jQuery plugin for producing big, responsive headlines. It works by splitting headlines into rows before resizing each row to fill the available horizontal space.
+####[Slabtext](http://freqdec.github.io/slabText/)
+A jQuery plugin for producing big, responsive headlines. It works by splitting headlines into rows before resizing each row to fill the available horizontal space.
 
-		####[Hatchshow](http://charliepark.org/hatchshow/)
-		A jQuery plugin to balance measures. Like Slabtext, it can be used to create big, bold headlines.
+####[Hatchshow](http://charliepark.org/hatchshow/)
+A jQuery plugin to balance measures. Like Slabtext, it can be used to create big, bold headlines.
 
-		####[ResponsiveText](https://github.com/ghepting/jquery-responsive-text)
-		A jQuery plugin to set font sizes responsively based on its container width. Unlike Squishy, FitText or Slabtext, it can be used with paragraph text.
+####[ResponsiveText](https://github.com/ghepting/jquery-responsive-text)
+A jQuery plugin to set font sizes responsively based on its container width. Unlike Squishy, FitText or Slabtext, it can be used with paragraph text.
 
-		###Text Positioning and Wrapping
+###Text Positioning and Wrapping
 
-		####[Bacon](http://baconforme.com/)
-		A jQuery plugin that allows for text to be wrapped around a bezier curve or a line.
+####[Bacon](http://baconforme.com/)
+A jQuery plugin that allows for text to be wrapped around a bezier curve or a line.
 
-		####[jQSlickWrap](http://www.jwf.us/projects/jQSlickWrap/)
-		A jQuery plugin that allows for text to be wrapped around the content of floated images.
+####[jQSlickWrap](http://www.jwf.us/projects/jQSlickWrap/)
+A jQuery plugin that allows for text to be wrapped around the content of floated images.
 
-		###Text Animations
+###Text Animations
 
-		####[Textillate](http://jschr.github.io/textillate/)
-		Built on top of animate.css and lettering.js libraries to apply CSS3 animations to text.
+####[Textillate](http://jschr.github.io/textillate/)
+Built on top of animate.css and lettering.js libraries to apply CSS3 animations to text.
 
-		####[Animate.css](http://daneden.github.io/animate.css/)
-		A library of cross-browser CSS animations.
+####[Animate.css](http://daneden.github.io/animate.css/)
+A library of cross-browser CSS animations.
 
-		####[Super Simple Text Rotator](http://www.thepetedesign.com/demos/jquery_super_simple_text_rotator_demo.html#)
+####[Super Simple Text Rotator](http://www.thepetedesign.com/demos/jquery_super_simple_text_rotator_demo.html#)
+A quick and easy way to add rotating text.
 
-		####[Flipping Text](https://github.com/peachananr/flipping_text)
+####[Flipping Text](https://github.com/peachananr/flipping_text)
+Creates a ticking intro animation.
 
-		###Kerning
+###Kerning
 
-		####[Kerning.js](http://kerningjs.com/)
-		A jQuery plugin that allows for text to be kerned correclty.
-		* Allows letter placing to be individually adjusted for perfect kerning.
-		* Allows the adjustment of individual character sizes, and for transformations to be applied to individual characters.
-		* Selective colouring, and conditional formatting.
+####[Kerning.js](http://kerningjs.com/)
+A jQuery plugin that allows for text to be kerned correctly.
+* Allows letter placing to be individually adjusted for perfect kerning.
+* Allows the adjustment of individual character sizes, and for transformations to be applied to individual characters.
+* Selective colouring, and conditional formatting.
 
-		####[Type Butter](http://typebutter.com/)
-		A jQuery plugin that allows for optical kerning for webfonts.
+####[Type Butter](http://typebutter.com/)
+A jQuery plugin that allows for optical kerning for webfonts.
 
-		###[ffffallback](http://ffffallback.com/)
-		Bookmarklet that allows you to identify webfonts on a site and test different fallback font choices.
+###[ffffallback](http://ffffallback.com/)
+Bookmarklet that allows you to identify webfonts on a site and test different fallback font choices.
 
-		Type Sources
-		-----------------
+Type Sources
+-----------------
 
-		###[Typekit](http://typekit.com)
-		* Subscription based service providing commercial typefaces. Now part of Adobe&rsquo;s Creative Cloud offering.
-		* Limited range of type foundries, although this does appear to be growing. Does not include Monotype of Linotype typefaces (separate services).
-		* Javscript based font availability: typekit-generated JS allows selected font-faces to be used in CSS.
+###[Typekit](http://typekit.com)
+* Subscription based service providing commercial typefaces. Now part of Adobe&rsquo;s Creative Cloud offering.
+* Limited range of type foundries, although this does appear to be growing. Does not include Monotype of Linotype typefaces (separate services).
+* Javscript based font availability: typekit-generated JS allows selected font-faces to be used in CSS.
 
-		###[MyFonts](http://www.myfonts.com)
-		* Selling one-off perpetual licenses to use commercial typefaces online. Allows you to download a webfont kit and host on your sites.
-		* Typefaces from Monotype and Linotype are provided on a pay-as-you-go basis, rather than one-off licences.
+###[MyFonts](http://www.myfonts.com)
+* Selling one-off perpetual licenses to use commercial typefaces online. Allows you to download a webfont kit and host on your sites.
+* Typefaces from Monotype and Linotype are provided on a pay-as-you-go basis, rather than one-off licences.
 
-		###[Fonts.com](http://www.fonts.com/web-fonts)
-		* Commercial offering from Monotype.
-		* Allows web and print font packages.
-		* Provides JS, CSS and self-hosting options.
+###[Fonts.com](http://www.fonts.com/web-fonts)
+* Commercial offering from Monotype.
+* Allows web and print font packages.
+* Provides JS, CSS and self-hosting options.
 
-		###[Google Fonts](http://www.google.com/fonts)
-		* Provides open-source fonts for free.
-		* Offers a wide range of font weights.
-		* Really good options to test drive typefaces, compare sets and examine character sets.
-		* Provides JS and CSS options for importing fonts to your site - either by specifying an external stylesheet, or importing font rules into your current stylesheet with `@import url`.
+###[Google Fonts](http://www.google.com/fonts)
+* Provides open-source fonts for free.
+* Offers a wide range of font weights.
+* Really good options to test drive typefaces, compare sets and examine character sets.
+* Provides JS and CSS options for importing fonts to your site - either by specifying an external stylesheet, or importing font rules into your current stylesheet with `@import url`.
 
-		###[Fontdeck](http://fontdeck.com/)
-		* Subscription based option, with annual pricing per font, and a bandwidth supplement for sites with over 2 million page impressions a month.
-		* Typefaces from a range of small foundries and type designers.
-		* CSS based option.
+###[Fontdeck](http://fontdeck.com/)
+* Subscription based option, with annual pricing per font, and a bandwidth supplement for sites with over 2 million page impressions a month.
+* Typefaces from a range of small foundries and type designers.
+* CSS based option.
 
-		###[Webtype](http://www.webtype.com/)
-		* Subscription service, with pricing levels based on the number of page impressions.
-		* Good range of fonts from the larger type foundries, including Monotype.
-		* CSS based option.
+###[Webtype](http://www.webtype.com/)
+* Subscription service, with pricing levels based on the number of page impressions.
+* Good range of fonts from the larger type foundries, including Monotype.
+* CSS based option.
 
-		###[Typecast](http://typecast.com/)
-		* Test drive fonts from fonts.com, Google, MyFonts, TypeKit, Webtype and FontDeck.
-		* Paid for service, but Personal and Team packages include a Fonts.com plan.
+###[Typecast](http://typecast.com/)
+* Test drive fonts from fonts.com, Google, MyFonts, TypeKit, Webtype and FontDeck.
+* Paid for service, but Personal and Team packages include a Fonts.com plan.
 
-		###[Font Squirrel](http://www.fontsquirrel.com/)
-		* Open source webfont kit generator.
-		* Provides open source fonts for use on the web, as well as a webfont generator to assemble webfont packages from uploaded fonts.
-		* Good, well-tagged directory with samples and clear licensing.
+###[Font Squirrel](http://www.fontsquirrel.com/)
+* Open source webfont kit generator.
+* Provides open source fonts for use on the web, as well as a webfont generator to assemble webfont packages from uploaded fonts.
+* Good, well-tagged directory with samples and clear licensing.
 
-		###[The League of Movable Type](https://www.theleagueofmoveabletype.com/)
-		* Innovative font foundry providing well-made, free & open-source, @font-face ready fonts.
-		* Great source of interesting and distinctive fonts.
-
-
-		Identifying Fonts (and pinching ideas)
-		-----------------
-
-		###[What the Font] (http://www.myfonts.com/WhatTheFont/)
-		* Useful for identifying typefaces from images uploaded to the site.
-
-		###[Identifont] (http://www.identifont.com/)
-		* Useful for browsing and identifying typefaces by appearance, or similarity to others. The questionnaire for identifying typefaces is often quite accurate, or at least good for exploring other options.
+###[The League of Movable Type](https://www.theleagueofmoveabletype.com/)
+* Innovative font foundry providing well-made, free & open-source, @font-face ready fonts.
+* Great source of interesting and distinctive fonts.
 
 
-		[1]: http://www.w3schools.com/css/css_font.asp] "W3Schools"
-		[2]: http://www.smashingmagazine.com/2014/09/29/balancing-line-length-font-size-responsive-web-design/#more-202415 "Smashing Magazine - Size Matters: Balancing Line Length And Font Size In Responsive Web Design"
-		[3]: http://practicaltypography.com/hyphens-and-dashes.html "hyphens and dashes"
-		[4]: http://www.cssfontstack.com/
-		[5]: http://kadavy.net/blog/posts/design-for-hackers-why-you-dont-use-garamond-on-the-web/ "David Kadavy"
-		
+Identifying Fonts (and pinching ideas)
+-----------------
+
+###[What the Font] (http://www.myfonts.com/WhatTheFont/)
+* Useful for identifying typefaces from images uploaded to the site.
+
+###[Identifont] (http://www.identifont.com/)
+* Useful for browsing and identifying typefaces by appearance, or similarity to others. The questionnaire for identifying typefaces is often quite accurate, or at least good for exploring other options.
+
+
+[1]: http://www.w3schools.com/css/css_font.asp] "W3Schools"
+[2]: http://www.smashingmagazine.com/2014/09/29/balancing-line-length-font-size-responsive-web-design/#more-202415 "Smashing Magazine - Size Matters: Balancing Line Length And Font Size In Responsive Web Design"
+[3]: http://practicaltypography.com/hyphens-and-dashes.html "hyphens and dashes"
+[4]: http://www.cssfontstack.com/
+[5]: http://kadavy.net/blog/posts/design-for-hackers-why-you-dont-use-garamond-on-the-web/ "David Kadavy"

@@ -14,8 +14,6 @@ Type Basics
 * Sans-serif fonts obviously don&rsquo;t have serifs.
 * Monospace fonts are those in which every glyph occupies the same width (unlike other fonts in which glphs are different widths).
 
-###Decorative, Heading and Body Fonts
-
 
 ###Glyphs
 * A glyph is an unique symbol within a font to represent a letter, number or punctuation.
@@ -33,7 +31,6 @@ Type Basics
 `body {font-size: 100%;}
 
 h1 {font-size: 2.5em;}`
-
 
 [W3Schools] [1]
 
@@ -60,11 +57,41 @@ h1 {font-size: 2.5em;}`
 * Set using line-height in CSS: `line-height: 1.2em;` or `line-height: 120%`;
 
 ###Kerning
+The space between individual characters, adjusted to increase readability and improve visual appeal. Particularly in letter combinations such as AW, AV, Yo, and with punctuation that is often brought under overhanging parts of other characters.
 
+###Tracking
+`letter-spacing`
+Tracking is the space between all characters in a line or paragraph, which can be set with the `letter-spacing` CSS attribute, adding or subtracting space between characters:
+
+`h1 {
+
+
+	letter-spacing: 2px;
+}
+
+
+h2 {
+
+	letter-spacing: -3px;
+
+	}`
+
+[W3 Schools] [3]
 
 ###Typographic Hierarchy
+Documents should be structured typographically, as well as semantically using different sizes and weights for the different heading levels:
+
+`<h1> <h2> <h3> <h4> <h5> <h6>`
+
 
 ###Readability
+Readability is a combination of font face and size, leading, and measure. The appropriate font size will depend on the x-height of the chosen font family and the weight of stroke in individual faces.
+
+Leading also needs to be adjusted depending on x-height and weight to provide sufficient white space between lines of text. Too much leading however, and it becomes difficult for the eye to follow. Tracking or letter spacing can also be used to increase the readability of particularly heavy, or small faces.
+
+As mentioned above, measure should be between 45 and 75 characters, although can vary within this depending on the chosen font family and leading.
+
+The right level of contrast also affects readability. A heavy, black face on a stark white background will be harder to read for long periods of time. Consider lower levels of contrast, with less heavy faces, or slightly tinted backgrounds &ndash; as with the creamy paper of many books.
 
 ###A Couple of Pedantic Points...
 
@@ -83,7 +110,7 @@ For measurements map coordinates, time and measurements in feet and inches, you 
 * Double prime: `&Prime;` or `&#8243;`
 
 ####Hyphens and Dashes
-Hyphens are a punctuation mark, and shouldn&rsquo;t be confused with the two typographic dashes, N and M dashes.
+Hyphens are a punctuation mark, used to combine compound words, and separate words across lines. They shouldn&rsquo;t be confused with the two typographic dashes, N and M dashes.
 
 An en dash or N dash is typically the width of the capital N character in a given typeface. En dashes indicates range of values (eg. 2014&ndash;2015) or connection between words (eg. Anglo&ndash;American relations), both unspaced. It can also be used parenthetically, with spaces (eg. She looked &ndash; with deep regret &ndash; at the terrible punctuation). En dashes are much more common in the UK, and em dashes are rarely used.
 * N dash: `&ndash;` or `&#8211;`
@@ -91,7 +118,24 @@ An en dash or N dash is typically the width of the capital N character in a give
 An em dash or M dash is typically the width of the capital M character in a given typeface. Em dashes are much more common in the US, where they are used un-spaced to break up parts of a sentence/in place of parentheses (eg. She looked&mdash;with deep regret&mdash;at the terrible punctuation).
 * M dash: `&mdash;` or `&#8212;`
 
-[Practical Typography] [3]
+Hyphenation can be controlled in CSS in Chrome with the `word-break` property, although this isn&rsquo;t implemented in Firefox:
+* `break-all` &ndash; lines are allowed to break between any two letters
+* `keep-al` &ndash; lines cannot break
+
+The CSS `hyphens` property is supported in Firefox and other Webkit browsers which ship with hyphenation dictionaries. This is dependent on the hyphenation dictionary though (not available in all languages), and requires the language to be specified inthe HTML or article tag: `<html lang="en">` / `<article lang="en">`:
+`-webkit-hyphens: auto;`
+
+`-moz-hyphens: auto;`
+
+`-ms-hyphens: auto;`
+
+`-o-hyphens: auto;`
+
+`hyphens: auto;`
+
+There is also a Javascript library available for injecting hyphens into documents, hyphenator.js (more below).
+
+[Practical Typography] [4]
 
 ####A Hyphen is not a Minus Sign...
 Yep, that&rsquo;s right, subtraction operators are distinct from hyphens, and multiplication symbols are distinct from Xs:
@@ -109,7 +153,7 @@ Fractions should also be rendered in their &lsquo;vulgar&rsquo; form if possible
 * One quarter: `&frac14;` or `&#188;`
 * One tenth: `&#8530;`
 
-History of Web Typography
+Past Limitations on Web Typography
 -------------------------
 
 ###Font Availability
@@ -129,14 +173,14 @@ Few fonts are available across almost all  systems, and therefore guaranteed to 
 ####Monospaced
 * Courier
 
-[CSS Font Stack] [3]
+[CSS Font Stack] [5]
 
 ###Screen Limitations
 Popular web fonts (Arial, Verdana, Georgia, and Times New Roman) are such not only because of their wide availability, but because they are drawn with the screen’s limitations in mind. For example, Georgia reads better on screen than Garamond primarily because it has a higher x-height, and therefore a larger eye.
 
 Computers only used to have 256 colours avaiable, and low resolution screens (the web is generally optimised for 72dpi). With almost all monitors now displaying 16million colours and rendering type edges much more smoothly, a greater range of fonts render better. Tablets and phones now also display at much closer to print quality.
 
-Thanks to [David Kadavy] [4]
+Thanks to [David Kadavy] [6]
 
 
 Using Webfonts
@@ -158,20 +202,20 @@ Font face is the CSS property used to specify a font and the URL where it can be
 
 	}`
 
-	Font files can be stored locally, with the `src` property of the CSS tag pointing to the relative address, or externally hosted on a CDN, as above with the Google Font Open Sans.
+Font files can be stored locally, with the `src` property of the CSS tag pointing to the relative address, or externally hosted on a CDN, as above with the Google Font Open Sans.
 
-	If you are using a service like Google Fonts, which provides a link to an external stylesheet then you can use the `font-family` property as normal in your stylesheets:
+If you are using a service like Google Fonts, which provides a link to an external stylesheet then you can use the `font-family` property as normal in your stylesheets:
 
 * Stylesheet link: `<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>`
 * CSS import: `@import url(http://fonts.googleapis.com/css?family=Open+Sans);`
 
-	`h1 {
+`h1 {
 
-		font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 
-		font-weight: 400;
+	font-weight: 400;
 
-		}`
+	}`
 
 To maximise compatability across browsers, you can specify multiple source files for in the `@font-face` property:
 
@@ -261,8 +305,20 @@ A jQuery plugin that allows for text to be kerned correctly.
 ####[Type Butter](http://typebutter.com/)
 A jQuery plugin that allows for optical kerning for webfonts.
 
-###[ffffallback](http://ffffallback.com/)
+###Hyphenation
+####[Hyphenator JS](https://code.google.com/p/hyphenator/)
+A Javascript library that injects hypehns using a large hyphenation dictionary.
+
+###Identifying fonts
+
+####[ffffallback](http://ffffallback.com/)
 Bookmarklet that allows you to identify webfonts on a site and test different fallback font choices.
+
+####[Fontface Ninja](http://www.fontface.ninja/)
+Chrome plugin for identifying fonts on a page. Slightly slicker and more detailed than WhatFont below.
+
+####[WhatFont](https://chrome.google.com/webstore/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm?hl=en)
+Another Chrome plugin for identifying fonts on a pge.
 
 Type Sources
 -----------------
@@ -323,6 +379,7 @@ Identifying Fonts (and pinching ideas)
 
 [1]: http://www.w3schools.com/css/css_font.asp] "W3Schools"
 [2]: http://www.smashingmagazine.com/2014/09/29/balancing-line-length-font-size-responsive-web-design/#more-202415 "Smashing Magazine - Size Matters: Balancing Line Length And Font Size In Responsive Web Design"
-[3]: http://practicaltypography.com/hyphens-and-dashes.html "hyphens and dashes"
-[4]: http://www.cssfontstack.com/
-[5]: http://kadavy.net/blog/posts/design-for-hackers-why-you-dont-use-garamond-on-the-web/ "David Kadavy"
+[3]: http://www.w3schools.com/cssref/pr_text_letter-spacing.asp "CSS letter-spacing Property"
+[4]: http://practicaltypography.com/hyphens-and-dashes.html "hyphens and dashes"
+[5]: http://www.cssfontstack.com/
+[6]: http://kadavy.net/blog/posts/design-for-hackers-why-you-dont-use-garamond-on-the-web/ "David Kadavy"

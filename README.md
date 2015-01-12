@@ -50,11 +50,15 @@ h1 {font-size: 2.5em;}`
 
 `font-style: italic`
 
-###Leading
+###Leading/Line-height
 `line-height`
 * The space between lines of text is referred to as leading in print typography, and refers to the distance between the baselines of successive lines of type. Strips of lead used to be used to separate the lines of type from another and increase the line height.
 * Leading or line-height can be used to increase readability of type. Greater space between lines of type means that the eye can more easily pick out type with a smaller x-height, and follow long-form type better.
-* Set using line-height in CSS: `line-height: 1.2em;` or `line-height: 120%`;
+* The key difference between print leading and web line-height is that leading is measured from baseline to baseline (type is aligned on the baseline) whereas CSS `line-height` aligns type evenly between baselines. Increasing leading therefore increases the space only below a line of type; increasing `line-height` increases the space above and below a line of type.
+* Set using line-height in CSS: `line-height: 1.2em;` or `line-height: 120%`
+* `line-height` can be used to set an approximation of the baseline grid for a page, and to control vertical rythmn. Guy Routledge recommends setting a line-height measure on the `body` tag, which is then inherited by child elements. Setting a unit-less line-height means that, in child elements, the line-height will be a factor of of the initial line-height and the element&rsquo;s font-size. This gives a consistent vertical rhytmn across the document. 
+
+[A to Z CSS] [3]
 
 ###Kerning
 The space between individual characters, adjusted to increase readability and improve visual appeal. Particularly in letter combinations such as AW, AV, Yo, and with punctuation that is often brought under overhanging parts of other characters.
@@ -76,7 +80,7 @@ h2 {
 
 	}`
 
-[W3 Schools] [3]
+[W3 Schools] [4]
 
 ###Typographic Hierarchy
 Documents should be structured typographically, as well as semantically using different sizes and weights for the different heading levels:
@@ -93,7 +97,20 @@ As mentioned above, measure should be between 45 and 75 characters, although can
 
 The right level of contrast also affects readability. A heavy, black face on a stark white background will be harder to read for long periods of time. Consider lower levels of contrast, with less heavy faces, or slightly tinted backgrounds &ndash; as with the creamy paper of many books.
 
-###A Couple of Pedantic Points...
+
+###Column Layouts
+`column-count`
+
+`column-width`
+
+`columns`
+
+`column-gap`
+
+There are two CSS properties to control whether and how many columns will appear. `column-count` sets the number of columns to a particular number, and `column width` sets the minimum desier column width. If `column-count` isn&rsquo;t set, the browser will automatically make as many columns to fit the available width. These can both be replaced or combine in `columns`. To set the gap between columns, you can use `column-gap`.
+
+[MDN Developer Network] [5]
+
 
 ####Typographer&rsquo;s Quotes
 Text should use typographer&rsquo;s quotes/smart quotes/curly quotes wherever possible:
@@ -135,7 +152,7 @@ The CSS `hyphens` property is supported in Firefox and other Webkit browsers whi
 
 There is also a Javascript library available for injecting hyphens into documents, hyphenator.js (more below).
 
-[Practical Typography] [4]
+[Practical Typography] [6]
 
 ####A Hyphen is not a Minus Sign...
 Yep, that&rsquo;s right, subtraction operators are distinct from hyphens, and multiplication symbols are distinct from Xs:
@@ -173,14 +190,14 @@ Few fonts are available across almost all  systems, and therefore guaranteed to 
 ####Monospaced
 * Courier
 
-[CSS Font Stack] [5]
+[CSS Font Stack] [7]
 
 ###Screen Limitations
 Popular web fonts (Arial, Verdana, Georgia, and Times New Roman) are such not only because of their wide availability, but because they are drawn with the screen’s limitations in mind. For example, Georgia reads better on screen than Garamond primarily because it has a higher x-height, and therefore a larger eye.
 
 Computers only used to have 256 colours avaiable, and low resolution screens (the web is generally optimised for 72dpi). With almost all monitors now displaying 16million colours and rendering type edges much more smoothly, a greater range of fonts render better. Tablets and phones now also display at much closer to print quality.
 
-Thanks to [David Kadavy] [6]
+Thanks to [David Kadavy] [8]
 
 
 Using Webfonts
@@ -379,7 +396,9 @@ Identifying Fonts (and pinching ideas)
 
 [1]: http://www.w3schools.com/css/css_font.asp] "W3Schools"
 [2]: http://www.smashingmagazine.com/2014/09/29/balancing-line-length-font-size-responsive-web-design/#more-202415 "Smashing Magazine - Size Matters: Balancing Line Length And Font Size In Responsive Web Design"
-[3]: http://www.w3schools.com/cssref/pr_text_letter-spacing.asp "CSS letter-spacing Property"
-[4]: http://practicaltypography.com/hyphens-and-dashes.html "hyphens and dashes"
-[5]: http://www.cssfontstack.com/
-[6]: http://kadavy.net/blog/posts/design-for-hackers-why-you-dont-use-garamond-on-the-web/ "David Kadavy"
+[3]: http://www.atozcss.com/the-css-line-height-property/ "Line-height"
+[4]: http://www.w3schools.com/cssref/pr_text_letter-spacing.asp "CSS letter-spacing Property"
+[5]: https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Using_multi-column_layouts "Using CSS multi-column layouts"
+[6]: http://practicaltypography.com/hyphens-and-dashes.html "hyphens and dashes"
+[7]: http://www.cssfontstack.com/
+[8]: http://kadavy.net/blog/posts/design-for-hackers-why-you-dont-use-garamond-on-the-web/ "David Kadavy"

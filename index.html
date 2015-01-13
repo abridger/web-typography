@@ -85,12 +85,12 @@
 					</ul>
 					<h2 style="padding-top: 40px;">Monospaced</h2>
 					<li style="font-family: 'Courier';">Courier</li>
+					<aside class="notes">
+						<p>Serifs are small projections attached to the ends of strokes that make up each character. Serifed fonts were generally used for print body text, as they were thought to increase readability, although there is now debate about this. Sans-serif fonts have generally been thought to be more readable on screen, as serifs aren&rsquo;t always rendered well on lower resolution screens.</p>
+						<p>Sans-serif fonts obviously don&rsquo;t have serifs.</p>
+						<p>Monospace fonts are those in which every glyph occupies the same width (unlike other fonts in which glphs are different widths).</p>
+					</aside>
 				</section>
-				<aside class="notes">
-					<p>Serifs are small projections attached to the ends of strokes that make up each character. Serifed fonts were generally used for print body text, as they were thought to increase readability, although there is now debate about this. Sans-serif fonts have generally been thought to be more readable on screen, as serifs aren&rsquo;t always rendered well on lower resolution screens.</p>
-					<p>Sans-serif fonts obviously don&rsquo;t have serifs.</p>
-					<p>Monospace fonts are those in which every glyph occupies the same width (unlike other fonts in which glphs are different widths).</p>
-				</aside>
 				<section data-background="rgba(21, 136, 193, 0.7)">
 					<h2>Glyphs</h2>
 					<h3>Characters in a font</h3>
@@ -98,14 +98,13 @@
 						<p style="text-transform: lowercase !important;">a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
 						<p>&agrave; &aacute; &acirc; &atilde; &auml; &aring; &aelig;</p>
 						<p>&cent; &pound; &copy; &reg; &frac14; &amp; &lt; &gt; &frasl; % ( ) + = - &ndash; &mdash; | ~</p>
+					<aside class="notes">
+						<p>A glyph is an unique symbol within a font to represent a letter, number or punctuation.</p>
+						<p>Different glyphs can be used to represent the same character or set of characters &ndash; uppercase, lowercase, ligatures, stylistic variations.</p>
+						<p>Not all fonts or families will have a complete set of glyphs, so it&rsquo;s possible that some of the characters you would like to used may be missing.</p>
+						<p>Some specialised typefaces have very specific sets of glyphs &ndash; icon fonts are becoming much more common in order to handle high resolution displays.</p>
+					</aside>
 				</section>
-				<aside class="notes">
-					<p>A glyph is an unique symbol within a font to represent a letter, number or punctuation.</p>
-					<p>Different glyphs can be used to represent the same character or set of characters &ndash; uppercase, lowercase, ligatures, stylistic variations.</p>
-					<p>Not all fonts or families will have a complete set of glyphs, so it&rsquo;s possible that some of the characters you would like to used may be missing.</p>
-					<p>Some specialised typefaces have very specific sets of glyphs &ndash; icon fonts are becoming much more common in order to handle high resolution displays.
-					</p>
-				</aside>
 				<section data-background="rgba(21, 136, 193, 0.6)">
 					<h2>
 						Font Size
@@ -118,29 +117,32 @@
 					<p style="font-size: 1em;	">1 em</p>
 					<p style="font-size: 1em;	">1 em</p>
 					<p style="font-size: 0.5em;	">0.5 em</p>
+					<aside class="notes">
+						<p>In print, this is described in points or picas, but on the web it is described in pixels or ems.</p>
+						<p>This can be set with pixel height, but it&rsquo;s recommended to use em rather than pixels to allow users to resize the text in the browser menu. Em units are recommended by W3C. 1em is equal to the current font size. The default text size in browsers is 16px. So, the default size of 1em is 16px.</p>
+					</aside>
 				</section>
-				<aside class="notes">
-					<p>In print, this is described in points or picas, but on the web it is described in pixels or ems.</p>
-					<p>This can be set with pixel height, but it&rsquo;s recommended to use em rather than pixels to allow users to resize the text in the browser menu. Em units are recommended by W3C. 1em is equal to the current font size. The default text size in browsers is 16px. So, the default size of 1em is 16px.</p>
-				</aside>
 				<section data-background="rgba(21, 136, 193, 0.5)">
 					<h2>
 						x-height
 					</h2>
 					<p>The distance between the baseline and the mean line of lower-case letters in a typeface.</p>
 					<p>This is generally the height of the letter x.</p>
+					<aside class="notes">
+						<p>This is the distance between the baseline and the mean line of lower-case letters in a typeface, which is generally the height of the letter x.</p>
+							<p>Different fonts will have different x heights at a similar size, which will affect their readability and overall impact.</p>
+							<p>CSS does have an `ex` unit, which is realtive to the x-height of the current font, but different browsers handle this extremely differently and it&rsquo;s rarely used.</p>
+					</aside>
 				</section>
-				<aside class="notes">
-					<p>This is the distance between the baseline and the mean line of lower-case letters in a typeface, which is generally the height of the letter x.</p>
-						<p>Different fonts will have different x heights at a similar size, which will affect their readability and overall impact.</p>
-						<p>CSS does have an `ex` unit, which is realtive to the x-height of the current font, but different browsers handle this extremely differently and it&rsquo;s rarely used.</p>
-				</aside>
 				<section data-background="rgba(21, 136, 193, 0.4)">
 					<h2>
 						Kerning
 					</h2>
 					<h3>The space between individual characters</h3>
 					<img src="images/kerning.png" />
+					<aside class="notes">
+						<p>The space between individual characters, adjusted to increase readability and improve visual appeal. Particularly in letter combinations such as AW, AV, Yo, and with punctuation that is often brought under overhanging parts of other characters.</p>
+					</aside>
 				</section>
 				<section data-background="rgba(21, 136, 193, 0.4)">
 					<h2>
@@ -150,6 +152,10 @@
 					<h3><code>letter-spacing</code></h3>
 					<p style="letter-spacing: 2px;">Letter spacing of two pixels</p>
 					<p style="letter-spacing: -3px;">Letter spacing of minus three pixels</p>
+					<aside class="notes">
+						<p>Tracking is the space between all characters in a line or paragraph, which can be set with the letter-spacing CSS attribute, adding or subtracting space between characters.
+						</p>
+					</aside>
 				</section>
 				<section data-background="rgba(21, 136, 193, 0.3)">
 					<h2>Leading</h2>
@@ -157,20 +163,21 @@
 					<h3><code>line-height</code></h3>
 					<p>For readability, this is usually more than the default height of the font &ndash; usually around 20% more for body text:</p>
 					<p><code>line-height: 1.2em</code></p>
+					<aside class="notes">
+						<p>The space between lines of text is referred to as leading in print typography, and refers to the distance between the baselines of successive lines of type. Strips of lead used to be used to separate the lines of type from another and increase the line height.</p>
+						<p>Leading or line-height can be used to increase readability of type. Greater space between lines of type means that the eye can more easily pick out type with a smaller x-height, and follow long-form type better.</p>
+					</aside>
 				</section>
-				<aside class="notes">
-					<p>The space between lines of text is referred to as leading in print typography, and refers to the distance between the baselines of successive lines of type. Strips of lead used to be used to separate the lines of type from another and increase the line height.</p>
-					<p>Leading or line-height can be used to increase readability of type. Greater space between lines of type means that the eye can more easily pick out type with a smaller x-height, and follow long-form type better.</p>
-				</aside>
-
 				<section data-background="rgba(21, 136, 193, 0.4)">
 					<h2>
 						Measure
 					</h2>
 					<h3>The length of a line of text</h3>
 					<p>This should be between 45 and 75 characters,<br />with an optimum length of 65.</p>
+					<aside class="notes">
+						<p>The length of a line of text. For a single column layout, the measure should be between 45 and 75 characters, with the optimimum generally considered to be 65 characters per line.</p>
+					</aside>
 				</section>
-
 				<section data-background="rgba(21, 136, 193, 0.2)">
 					<h2>&lsquo;Smart Quotes&rsquo;</h2>
 					<p>&lsquo; &rsquo; not ' '</p>
@@ -180,6 +187,10 @@
 					<p>For measurements, use primes:</p>
 					<p>40&deg; 44&prime; 54.3588&Prime; N, 73&deg; 59&prime; 8.3616&Prime; W</p>
 					<p><code>&amp;prime; &amp;Prime;</code></p>
+					<aside class="notes">
+						<p>Text should use typographer&rsquo;s quotes/smart quotes/curly quotes wherever possible.</p>
+						<p>For measurements map coordinates, time and measurements in feet and inches, you should use primes &ndash; eg. 40&deg; 44&prime; 54.3588&Prime; N, 73&deg; 59&prime; 8.3616&Prime; W.</p>
+					</aside>
 				</section>
 				<section data-background="rgba(21, 136, 193, 0.1)">
 					<h2>Hyphens and Dashes</h2>
@@ -190,6 +201,12 @@
 					<h3 style="padding-top: 20px;">Em Dash: <code>&amp;mdash; </code></h3>
 					<p>Can be used parenthetically:<br />eg. She looked&mdash;with deep regret&mdash;at the terrible punctuation.
 					</p>
+					<aside class="notes">
+						<p>Hyphens are a punctuation mark, used to combine compound words, and separate words across lines. They shouldn&rsquo;t be confused with the two typographic dashes, N and M dashes.</p>
+						<p>An en dash or N dash is typically the width of the capital N character in a given typeface. En dashes indicates range of values (eg. 2014&ndash;2015) or connection between words (eg. Anglo&ndash;American relations), both unspaced. It can also be used parenthetically, with spaces (eg. She looked &ndash; with deep regret &ndash; at the terrible punctuation). En dashes are much more common in the UK, and em dashes are rarely used.</p>
+						<p>An em dash or M dash is typically the width of the capital M character in a given typeface. Em dashes are much more common in the US, where they are used un-spaced to break up parts of a sentence/in place of parentheses (eg. She looked&mdash;with deep regret&mdash;at the terrible punctuation).
+						</p>
+					</aside>
 				</section>
 				<section data-background="rgb(21, 136, 193, 0)">
 					<h2>A Few Examples</h2>

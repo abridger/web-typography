@@ -68,15 +68,10 @@ The space between individual characters, adjusted to increase readability and im
 Tracking is the space between all characters in a line or paragraph, which can be set with the `letter-spacing` CSS attribute, adding or subtracting space between characters:
 
 `h1 {
-
 	letter-spacing: 2px;
 }
-
-
 h2 {
-
 	letter-spacing: -3px;
-
 	}`
 
 [W3 Schools] [4]

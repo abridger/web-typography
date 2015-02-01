@@ -69,7 +69,6 @@ Tracking is the space between all characters in a line or paragraph, which can b
 
 `h1 {
 
-
 	letter-spacing: 2px;
 }
 

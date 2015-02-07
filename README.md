@@ -94,13 +94,12 @@ The right level of contrast also affects readability. A heavy, black face on a s
 
 
 ###Column Layouts
-`column-count`
-
-`column-width`
-
-`columns`
-
-`column-gap`
+```
+column-count
+column-width
+columns
+column-gap
+```
 
 There are two CSS properties to control whether and how many columns will appear. `column-count` sets the number of columns to a particular number, and `column width` sets the minimum desier column width. If `column-count` isn&rsquo;t set, the browser will automatically make as many columns to fit the available width. These can both be replaced or combine in `columns`. To set the gap between columns, you can use `column-gap`.
 
@@ -138,13 +137,9 @@ The CSS `hyphens` property is supported in Firefox and other Webkit browsers whi
 
 ```
 -webkit-hyphens: auto;
-
 -moz-hyphens: auto;
-
 -ms-hyphens: auto;
-
 -o-hyphens: auto;
-
 hyphens: auto;
 ```
 
@@ -205,16 +200,11 @@ Font face is the CSS property used to specify a font and the URL where it can be
 
 ```
 @font-face {
-
-font-family: 'Open Sans';
-
-font-style: normal;
-
-font-weight: 400;
-
-src: url(http://fonts.gstatic.com/s/opensans/v10/K88pR3goAWT7BTt32Z01m5Bw1xU1rKptJj_0jans920.woff2) format('woff2');
-
-unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(http://fonts.gstatic.com/s/opensans/v10/K88pR3goAWT7BTt32Z01m5Bw1xU1rKptJj_0jans920.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
 }
 ```
 
@@ -225,25 +215,20 @@ If you are using a service like Google Fonts, which provides a link to an extern
 * Stylesheet link: `<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>`
 * CSS import: `@import url(http://fonts.googleapis.com/css?family=Open+Sans);`
 
-```h1 {
-
-font-family: 'Open Sans', sans-serif;
-
-font-weight: 400;
-
-}```
+```
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+```
 
 To maximise compatability across browsers, you can specify multiple source files for in the `@font-face` property:
 
 ```
 src: url('fonts/FontName.eot');
-
 src: url('fonts/FontName.eot?#iefix') format('embedded-opentype'),
-
 url('fonts/FontName-webfont.woff') format('woff'),
-
 url('fonts/FontName-webfont.ttf') format('truetype'),
-
 url('fonts/FontName-webfont.svg#FontName') format('svg');
 ```
 

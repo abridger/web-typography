@@ -28,9 +28,9 @@ Type Basics
 * This can be set with pixel height, but it&rsquo;s recommended to use em rather than pixels to allow users to resize the text in the browser menu. Em units are recommended by W3C. 1em is equal to the current font size. The default text size in browsers is 16px. So, the default size of 1em is 16px.
 * Unfortunately, there is still a problem with older versions of IE and ems. The text becomes larger than it should when made larger, and smaller than it should when made smaller. The solution that works in all browsers, is to set a default font-size in percent for the <body> element and then use ems to set the size of specific elements in the body:
 
-`body {font-size: 100%;}
+`body {font-size: 100%;}`
 
-h1 {font-size: 2.5em;}`
+`h1 {font-size: 2.5em;}`
 
 [W3Schools] [1]
 
@@ -67,12 +67,8 @@ The space between individual characters, adjusted to increase readability and im
 `letter-spacing`
 Tracking is the space between all characters in a line or paragraph, which can be set with the `letter-spacing` CSS attribute, adding or subtracting space between characters:
 
-`h1 {
-	letter-spacing: 2px;
-}
-h2 {
-	letter-spacing: -3px;
-	}`
+`h1 { letter-spacing: 2px; }`
+`h2 { letter-spacing: -3px; }`
 
 [W3 Schools] [4]
 
@@ -200,17 +196,11 @@ Using Webfonts
 Font face is the CSS property used to specify a font and the URL where it can be found:
 
 `@font-face {
-
 	font-family: 'Open Sans';
-
 	font-style: normal;
-
 	font-weight: 400;
-
 	src: url(http://fonts.gstatic.com/s/opensans/v10/K88pR3goAWT7BTt32Z01m5Bw1xU1rKptJj_0jans920.woff2) format('woff2');
-
 	unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
-
 	}`
 
 Font files can be stored locally, with the `src` property of the CSS tag pointing to the relative address, or externally hosted on a CDN, as above with the Google Font Open Sans.
@@ -220,25 +210,18 @@ If you are using a service like Google Fonts, which provides a link to an extern
 * Stylesheet link: `<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>`
 * CSS import: `@import url(http://fonts.googleapis.com/css?family=Open+Sans);`
 
-`h1 {
-
+```h1 {
 	font-family: 'Open Sans', sans-serif;
-
 	font-weight: 400;
-
-	}`
+	}```
 
 To maximise compatability across browsers, you can specify multiple source files for in the `@font-face` property:
 
-		`src: url('fonts/FontName.eot');
-
+		```src: url('fonts/FontName.eot');
 		src: url('fonts/FontName.eot?#iefix') format('embedded-opentype'),
-
 		url('fonts/FontName-webfont.woff') format('woff'),
-
 		url('fonts/FontName-webfont.ttf') format('truetype'),
-
-		url('fonts/FontName-webfont.svg#FontName') format('svg');`
+		url('fonts/FontName-webfont.svg#FontName') format('svg');```
 
 #####Browser support as of 1/1/2015:
 * EOT - Embedded OpenType fonts: IE8 upwards.
